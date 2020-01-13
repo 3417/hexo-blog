@@ -13,8 +13,8 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://3417.github.io
-root: /
+url: https://3417.github.io
+root: /hexo-blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -100,7 +100,7 @@ theme: nexT
 deploy:
   type: git
   repo: 
-    github: https://3417.github.io/hexo-blog/
+    github: https://github.com/3417/hexo-blog
   branch: master  
 
 symbols_count_time:
