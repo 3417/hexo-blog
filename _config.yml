@@ -98,7 +98,10 @@ theme: nexT
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repo: 
+    github: https://3417.github.io/hexo-blog/
+  branch: master  
 
 symbols_count_time:
   # 文章上部是否显示字数
