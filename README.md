@@ -12,6 +12,6 @@
   hexo g == hexo generate
   hexo clean
   hexo s = hexo server
-  hexo deploy
+  hexo deploy==>(hexo g -d)
 
 ```
