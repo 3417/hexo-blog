@@ -34,6 +34,13 @@
             </div>
             <div class="tag-cloud-tags">
               {{ tagcloud({min_font: theme.tagcloud.min, max_font: theme.tagcloud.max, amount: theme.tagcloud.amount, color: true, start_color: theme.tagcloud.start, end_color: theme.tagcloud.end}) }}
+            <script type="text/javascript">
+              var list = document.querySelectorAll('.tag-cloud-tags a');
+              Array.prototype.forEach.call(list, (item, index) => {
+                item.style.fontSize = Math.floor(Math.random() * 28 + 12) + 'px';//12 ~ 40
+                item.style.color = 'rgb(' + Math.floor(Math.random() * 201) + ', ' + Math.floor(Math.random() * 201) + ', ' + Math.floor(Math.random() * 201) + ')';// 0,0,0 -> 200,200,200
+              });
+            </script>
             </div>
           </div>
         {% elif page.type === 'categories' %}
