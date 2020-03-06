@@ -201,14 +201,20 @@ social_icons:
 # Blog rolls
 links_settings:
   icon: link
-  title: 友情链接
+  title: 常用网址
   # Available values: block | inline
   layout: inline
 
 links:
-  baidu: http://www.baidu.com
+  Baidu: http://www.baidu.com/
   Google: https://www.google.com/
   StackOverflow: https://stackoverflow.com/
+  Axios中文文档: https://www.kancloud.cn/yunye/axios/234845
+  Vue中文社区: https://www.vue-js.com/
+  Animate: https://daneden.github.io/animate.css/
+  #Clippy: https://bennettfeely.com/clippy/
+  mikutap(舒缓压力): https://aidn.jp/mikutap/
+  MDN: https://developer.mozilla.org/zh-CN/docs/Web
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
 toc:
