@@ -1,7 +1,7 @@
 ---
 title: Vue项目使用SCSS使用全局变量
 date: 2019-12-29 14:05:59
-tags: [Vue,sass]
+tags: [Vue]
 ---
 
 
