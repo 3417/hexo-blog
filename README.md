@@ -13,5 +13,6 @@
   hexo clean
   hexo s = hexo server
   hexo deploy==>(hexo g -d)
-
+gitee:http://softwared.gitee.io/hexo-blog/
+github:https://3417.github.io/hexo-blog/
 ```
