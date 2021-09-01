@@ -9,11 +9,11 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "5.2.0"
   },
   "dependencies": {
     "global": "^4.4.0",
-    "hexo": "^4.2.1",
+    "hexo": "5.2.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-index": "^1.0.0",
@@ -25,6 +25,7 @@
     "hexo-symbols-count-time": "^0.7.0"
   },
   "devDependencies": {
-    "hexo-deployer-git": "^2.1.0"
+    "hexo-deployer-git": "^2.1.0",
+    "hexo-theme-fluid": "^1.8.11"
   }
 }

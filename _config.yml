@@ -7,7 +7,7 @@ title: 兜兜转转-前端切图仔
 subtitle: '不试试，你怎么会知道绝望了'
 description: '生活不能只有眼前的苟且,还得有诗和远方.'
 keywords:
-author: Moon.L
+author: Dring.L
 language: zh-CN
 timezone: ''
 
@@ -93,7 +93,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: nexT
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
