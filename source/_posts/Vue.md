@@ -1,7 +1,8 @@
 ---
 title: Vue-Cli创建项目
 date: 2019-12-29 14:05:28
-tags: [Vue,VueCli]
+tag: VueCli
+categories: [Vue,VueCli]
 ---
 ## Vue2.xx创建项目
 

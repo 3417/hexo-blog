@@ -1,15 +1,16 @@
 ---
 title: Mock
 date: 2020-02-17 15:24:49
-tags:
-categories:
+tags: Mock
+categories: [Mock]
 ---
 
 
 {% blockquote %}
 生成随机数据，拦截 Ajax 请求(分为线上版本和本地版本)
 
-线上版本参照：http://mockjs.com/ ==>https://www.easy-mock.com/docs
+~~~线上版本参照：http://mockjs.com/ ==>https://www.easy-mock.com/docs~~~
+(线上环境不稳定建议使用本地搭建)
 {% endblockquote %}
 
 <!-- more -->

@@ -1,8 +1,10 @@
 ---
 title: 前端层叠样式表
 date: 2020-02-19 15:30:49
-tags: [Less,Scss,Sass]
-categories: [Less,Scss,Sass]
+tags: [less,sass]
+categories:
+  - less
+  - sass
 ---
 
 ## 区别

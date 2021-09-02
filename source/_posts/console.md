@@ -1,11 +1,13 @@
 ---
-title: console
+title: 控制台console
 date: 2020-08-10 23:40:03
-tags: console
+tags: [console]
 categories: [console]
 ---
 
-
+{% note success %}
+console
+{% endnote %}
 ## 基础
 1. console.log()
 2. console.info()
@@ -27,4 +29,4 @@ console.time() 记录代码执行的耗时，以毫秒（ms）为单位
 替换字符串 - string substitution
 console.log("%o is xxxxx %f xxx",{name:"Sean"},18,99.5)
 console.log("%c superMan","color:red;xxxxx");
-````
+```

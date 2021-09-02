@@ -1,11 +1,12 @@
 ---
-title: Lowdb(一个操作JSON的数据库)
+title: Lowdb
 date: 2019-10-02 14:05:28
 tags: Lowdb
+categories: [Lowdb]
 ---
 
 ### 序言：
-LowDB是基于node的纯JSON文件数据库
+LowDB是基于node的纯JSON文件数据库(一个操作JSON的数据库)
 数据库被自动存往db.json
 你能使用任何lodash方法来查询和操纵数据库
 

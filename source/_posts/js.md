@@ -1,8 +1,8 @@
 ---
-title: js的一些功能
+title: JS的一些方法
 date: 2020-07-14 22:29:00
-tags: js
-categories: JavaScript
+tags: JavaScript
+categories: [JavaScript]
 ---
 
 

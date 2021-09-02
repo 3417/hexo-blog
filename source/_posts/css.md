@@ -1,7 +1,7 @@
 ---
-title:  一些CSS的用法
+title:  CSS的一些用法
 date: 2020-07-14 22:12:33
-tags: [css]
+tags: css
 categories: [css]
 ---
 

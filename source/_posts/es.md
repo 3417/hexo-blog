@@ -1,8 +1,8 @@
 ---
-title: Javascript ES新特性
+title: ES新特性
 date: 2020-02-24 14:34:13
-tags: [ES6,ES7]
-categories: [ES新特性]
+tags: JavaScript
+categories: [JavaScript]
 ---
 
 ## ES新特性

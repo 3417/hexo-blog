@@ -1,8 +1,8 @@
 ---
-title: Map-Set
+title: ES6 Map和Set
 date: 2020-02-25 15:21:47
-tags: 
-categories: [map-set区别]
+tags: JavaScript
+categories: [JavaScript]
 ---
 
 ## Map和Set的区别

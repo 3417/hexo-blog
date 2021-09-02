@@ -1,8 +1,8 @@
 ---
 title: 前端面试
 date: 2020-11-17 17:04:33
-tags: [js,html,css]
-categories: [js,html,css]
+tag: 前端面试
+categories: [前端面试]
 ---
 
 

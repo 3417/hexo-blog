@@ -1,8 +1,8 @@
 ---
 title: Input预览图片美化上传框
 date: 2020-08-10 23:35:21
-tags: js
-categories: [javascript]
+tag: JavaScript
+categories: [JavaScript]
 ---
 
 
