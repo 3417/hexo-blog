@@ -38,4 +38,33 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 $ hexo deploy
 ```
 
+
+### 如何在hexo引入本地图片
+
+1、设置根目录下的_config.yml的post_asset_folder: true
+2、执行hexo new post_name的时候就会生成对应的文件夹和文件名称
+3、将图片资源放在post_name文件夹中，文章就可以使用相对路径引用图片资源了
+<!-- more -->
+
+{% codeblock %}
+post_asset_folder: true //设置为true
+
+hexo new post_name //生成对应的文件夹和文件名称
+{% endcodeblock %}
+```
+a. 本地资源不限制大小
+![](img.jpg)
+b. 网络图片资源，限制图片显示尺寸
+{% img [class names] /path/to/image [width] [height] '"title text" "alt text"' %}
+```
+4、插入网络图片
+{% img http://hd.wallpaperswide.com/thumbs/beast_2-t2.jpg 一个网络图片%}
+
+5、关于图片放大的效果(基于nexT主题)
+{% blockquote %}
+1、图片弹出效果（鼠标移到图片上显示放大镜效果）请参考：https://github.com/theme-next/theme-next-fancybox3.
+2、进入next主题目录下执行git clone https://github.com/theme-next/theme-next-fancybox3 source/lib/fancybox
+3、配置fancybox，注意是clone到主题下面的source/lib/fancybox的主题配置_config.yml,fancybox: true
+{% endblockquote %}
+
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)

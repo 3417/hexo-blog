@@ -1,10 +1,10 @@
 ---
 title: 项目中遇到的问题集合
 date: 2021-09-03 16:35:42
-index_img: /img/practice.jpg
-banner_img: /img/practice.jpg
-tags: [Javascript,Vue,sass,TypeScript]
-categories: [Javascript,Vue,sass,TypeScript]
+index_img: /img/practice/practice.jpg
+banner_img: /img/practice/practice.jpg
+tags: [JavaScript,Vue,sass,TypeScript]
+categories: [JavaScript,Vue,sass,TypeScript]
 ---
 
 ## Vue代理问题

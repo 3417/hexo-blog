@@ -1,8 +1,8 @@
 ---
-title: Typescript
+title: TypeScript
 date: 2020-01-17 16:20:10
-tag: Typescript
-categories: [Typescript]
+tag: TypeScript
+categories: [TypeScript]
 ---
 
 
