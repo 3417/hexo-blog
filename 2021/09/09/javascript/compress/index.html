@@ -14,13 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="基本操作
-添加暂存：
-123git add . //当前目录及其子目录git add -A (仓库内所有的变更加入暂存区)git add 文件1 文件2...(把指定文件添加到暂存区)">
+  <meta name="description" content="生活不能只有眼前的苟且,还得有诗和远方.">
   <meta name="author" content="Dring.L">
   <meta name="keywords" content="">
   
-  <title>vscode的git提交流程 - 兜兜转转-前端切图仔</title>
+  <title>前端压缩图片 - 兜兜转转-前端切图仔</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -165,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="vscode的git提交流程">
+            <span class="h2" id="subtitle" title="前端压缩图片">
               
             </span>
 
@@ -180,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-09-08 10:01" pubdate>
-        2021年09月8日 星期三 上午 10:01
+      <time datetime="2021-09-09 15:18" pubdate>
+        2021年09月9日 星期四 下午 15:18
       </time>
     </span>
   
@@ -192,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      535 字
+      486 字
     </span>
   
 
@@ -202,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      7
        分钟
     </span>
   
@@ -240,45 +238,12 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">vscode的git提交流程</h1>
+            <h1 style="display: none">前端压缩图片</h1>
             
             <div class="markdown-body">
-              <h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><ol>
-<li><p>添加暂存：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">git</span> <span class="hljs-keyword">add</span> . <span class="hljs-comment">//当前目录及其子目录</span><br><span class="hljs-symbol">git</span> <span class="hljs-keyword">add</span> -A (仓库内所有的变更加入暂存区)<br><span class="hljs-symbol">git</span> <span class="hljs-keyword">add</span> 文件<span class="hljs-number">1</span> 文件<span class="hljs-number">2</span>...(把指定文件添加到暂存区)<br></code></pre></td></tr></table></figure>
-<a id="more"></a></li>
-<li><p>本地commit</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> commit -m <span class="hljs-string">&quot;暂存信息&quot;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>push云端</p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">git <span class="hljs-keyword">push</span><br></code></pre></td></tr></table></figure></li>
-<li><p>拉取云端代码：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git pull --rebase  <span class="hljs-regexp">//</span> git pull -r<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>撤销commit</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">git revert HEAD <span class="hljs-regexp">//</span>撤销前一次的commit<br>git revert commit <span class="hljs-regexp">//</span>撤销指定版本，撤销也作为第一次提交保存<br></code></pre></td></tr></table></figure></li>
-<li><p>查看git在那个分支上</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git branch -v</span><br></code></pre></td></tr></table></figure></li>
-<li><p>切换到指定的分支</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">git</span> checkout 指定分支<br></code></pre></td></tr></table></figure></li>
-<li><p>比较差异</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">git <span class="hljs-keyword">diff </span>某文件 (比较文件差异)<br>git <span class="hljs-keyword">diff </span>--<span class="hljs-keyword">cache(比较暂存区和head的差异)</span><br><span class="hljs-keyword"></span>git <span class="hljs-keyword">diff </span>(比较工作区和暂存区的所有差异)<br>git <span class="hljs-keyword">diff </span>--<span class="hljs-keyword">cache </span>某文件(比较某文件暂存区和head的差异)<br></code></pre></td></tr></table></figure></li>
-<li><p>回滚</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">git <span class="hljs-keyword">reset</span> 文件<span class="hljs-number">1</span> 文件<span class="hljs-number">2.</span>..(把暂存区指定文件回复和head一样)<br>git <span class="hljs-keyword">reset</span> <span class="hljs-comment">--hard(把暂存区和工作区所有文件恢复成和head一样)</span><br></code></pre></td></tr></table></figure></li>
-<li><p>比较difftool比较任意两个commit的差异</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs maxima">git difftool commit1 commit2<br><br>注意，从工作区回滚到暂存区则用 checkout ，否则用 <span class="hljs-built_in">reset</span><br></code></pre></td></tr></table></figure></li>
-<li><p>查看哪些文件没有被git管控</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">git ls-<span class="hljs-built_in">files</span> <span class="hljs-comment">--others</span><br><span class="hljs-number">12.</span>git reflog<span class="hljs-comment"> //获取本地commit所有的信息</span><br></code></pre></td></tr></table></figure>
+              <h2 id="前端预览图片"><a href="#前端预览图片" class="headerlink" title="前端预览图片"></a>前端预览图片</h2><figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-keyword">if</span>(<span class="hljs-built_in">window</span>.createObjectURL != <span class="hljs-literal">undefined</span>)&#123;<br>    <span class="hljs-built_in">url</span> = <span class="hljs-built_in">window</span>.createObjectURL(file);<br>&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-built_in">window</span>.URl != <span class="hljs-literal">undefined</span>)&#123;<br>    <span class="hljs-built_in">url</span> = <span class="hljs-built_in">window</span>.URL.createObjectURL(file);<br>&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-built_in">window</span>.webkitURL != <span class="hljs-literal">undefined</span>)&#123;<br>    <span class="hljs-built_in">url</span> = <span class="hljs-built_in">window</span>.webkitURL.createObjectURL(file);<br>&#125;<br></code></pre></td></tr></table></figure>
 
-</li>
-</ol>
-<h2 id="查看git的信息"><a href="#查看git的信息" class="headerlink" title="查看git的信息"></a>查看git的信息</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript">git <span class="hljs-built_in">log</span> <span class="hljs-comment">--oneline</span><br>git reflog<br></code></pre></td></tr></table></figure>
-
-<h2 id="使用commitizen规范commit消息"><a href="#使用commitizen规范commit消息" class="headerlink" title="使用commitizen规范commit消息"></a>使用commitizen规范commit消息</h2><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">全局安装:<br>npm install commitizen -g <span class="hljs-string">//</span>全局安装规范化<br>本地安装:<br>npm:<br>npm install commitizen <span class="hljs-params">--save-dev</span><br>npm commitizen init cz-conventional-changelog <span class="hljs-params">--save-dev</span> <span class="hljs-params">--save-exact</span><br><br>yarn:<br>yarn add commitizen <span class="hljs-params">--dev</span><br>yarn commitizen init cz-conventional-changelog <span class="hljs-params">--yarn</span> <span class="hljs-params">--dev</span> <span class="hljs-params">--exact</span><br><br>手动配置package.json<br>script:&#123;<br>    commit<span class="hljs-function">:git-cz</span><br>&#125;<br></code></pre></td></tr></table></figure>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ol>
-<li>git cz 代替git commit<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs maxima">feat：新功能（<span class="hljs-built_in">feature</span>）<br><span class="hljs-built_in">fix</span>：修补bug<br>docs：文档（documentation）<br><span class="hljs-built_in">style</span>： 格式（不影响代码运行的变动）<br>refactor：重构（即不是新增功能，也不是修改bug的代码变动）<br>test：增加测试<br>chore：构建过程或辅助工具的变动<br>perf:提高性能的代码更改<br>ci:对CI配置文件和脚本的更改（示例范围：travis、circle、browserstack、sattlabs）<br>...<br></code></pre></td></tr></table></figure></li>
-<li>提交结构分为三部分</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css">head、<span class="hljs-selector-tag">body</span>、<span class="hljs-selector-tag">footer</span> <br>提交时，分别对应的是提交的类别、提交影响的范围、提交的简短描述、提交的变动信息。<br></code></pre></td></tr></table></figure>
+<h2 id="前端上传压缩"><a href="#前端上传压缩" class="headerlink" title="前端上传压缩"></a>前端上传压缩</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">/*</span><br><span class="hljs-comment">        三个参数</span><br><span class="hljs-comment">        file：一个是文件(类型是图片格式)，</span><br><span class="hljs-comment">        opts：压缩参数&#123;width: 图片宽度, height: 图片高度, quality: 缩放比例，默认0.9&#125;</span><br><span class="hljs-comment">        callback：回调函数，文件blob</span><br><span class="hljs-comment">        photoCompress()</span><br><span class="hljs-comment">         */</span><br><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">photoCompress</span>(<span class="hljs-params">file, opts, callback</span>) </span>&#123;<br>    <span class="hljs-keyword">var</span> ready = <span class="hljs-keyword">new</span> FileReader();<br>    <span class="hljs-comment">/*开始读取指定的Blob对象或File对象中的内容. 当读取操作完成时,readyState属性的值会成为DONE,如果设置了onloadend事件处理程序,则调用之.同时,result属性中将包含一个data: URL格式的字符串以表示所读取文件的内容.*/</span><br>    ready.readAsDataURL(file);<br>    ready.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>        <span class="hljs-keyword">var</span> re = <span class="hljs-built_in">this</span>.result;<br>        canvasDataURL(re, opts, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">base64Codes</span>) </span>&#123;<br>            <span class="hljs-keyword">if</span> (opts.wantFile) &#123;<br>                callback(convertBase64UrlToFile(base64Codes, file.name));<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                callback(convertBase64UrlToBlob(base64Codes));<br>            &#125;<br>        &#125;);<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">canvasDataURL</span>(<span class="hljs-params">path, obj, callback</span>) </span>&#123;<br>    <span class="hljs-keyword">var</span> img = <span class="hljs-keyword">new</span> Image();<br>    img.src = path;<br>    img.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>        <span class="hljs-keyword">var</span> that = <span class="hljs-built_in">this</span>;<br>        <span class="hljs-comment">// 默认按比例压缩</span><br>        <span class="hljs-keyword">var</span> w = that.width,<br>            h = that.height,<br>            scale = w / h;<br>        w = obj.width || w;<br>        h = obj.height || (w / scale);<br>        <span class="hljs-keyword">var</span> quality = <span class="hljs-number">0.7</span>; <span class="hljs-comment">// 默认图片质量为0.7</span><br>        <span class="hljs-comment">//如果分辨率大于2000</span><br>        <span class="hljs-keyword">if</span> (w &gt; <span class="hljs-number">2000</span>) &#123;<br>            w = <span class="hljs-number">2000</span>;<br>            h = (w / scale)<br>        &#125;<br>        <span class="hljs-comment">//生成canvas</span><br>        <span class="hljs-keyword">var</span> canvas = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&#x27;canvas&#x27;</span>);<br>        <span class="hljs-keyword">var</span> ctx = canvas.getContext(<span class="hljs-string">&#x27;2d&#x27;</span>);<br>        <span class="hljs-comment">// 创建属性节点</span><br>        <span class="hljs-keyword">var</span> anw = <span class="hljs-built_in">document</span>.createAttribute(<span class="hljs-string">&quot;width&quot;</span>);<br>        anw.nodeValue = w;<br>        <span class="hljs-keyword">var</span> anh = <span class="hljs-built_in">document</span>.createAttribute(<span class="hljs-string">&quot;height&quot;</span>);<br>        anh.nodeValue = h;<br>        canvas.setAttributeNode(anw);<br>        canvas.setAttributeNode(anh);<br>        ctx.drawImage(that, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, w, h);<br>        <span class="hljs-comment">// 图像质量</span><br>        <span class="hljs-keyword">if</span> (obj.quality &amp;&amp; obj.quality &lt;= <span class="hljs-number">1</span> &amp;&amp; obj.quality &gt; <span class="hljs-number">0</span>) &#123;<br>            quality = obj.quality;<br>        &#125;<br>        <span class="hljs-comment">// quality值越小，所绘制出的图像越模糊</span><br>        <span class="hljs-keyword">var</span> base64 = canvas.toDataURL(<span class="hljs-string">&#x27;image/jpeg&#x27;</span>, quality);<br>        <span class="hljs-comment">// 回调函数返回base64的值</span><br>        callback(base64);<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 将以base64的图片url数据转换为Blob</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param <span class="hljs-variable">urlData</span></span></span><br><span class="hljs-comment"> *            用url方式表示的base64图片数据</span><br><span class="hljs-comment"> */</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">convertBase64UrlToBlob</span>(<span class="hljs-params">urlData</span>) </span>&#123;<br>    <span class="hljs-keyword">var</span> arr = urlData.split(<span class="hljs-string">&#x27;,&#x27;</span>),<br>        mime = arr[<span class="hljs-number">0</span>].match(<span class="hljs-regexp">/:(.*?);/</span>)[<span class="hljs-number">1</span>],<br>        bstr = atob(arr[<span class="hljs-number">1</span>]),<br>        n = bstr.length,<br>        u8arr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Uint8Array</span>(n);<br>    <span class="hljs-keyword">while</span> (n--) &#123;<br>        u8arr[n] = bstr.charCodeAt(n);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Blob([u8arr], &#123;<br>        <span class="hljs-attr">type</span>: mime<br>    &#125;);<br>&#125;<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -287,7 +252,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/hexo-blog/categories/git/">git</a>
+                      <a class="hover-with-bg" href="/hexo-blog/categories/JavaScript/">JavaScript</a>
                     
                   </div>
                 
@@ -295,7 +260,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/hexo-blog/tags/git/">git</a>
+                      <a class="hover-with-bg" href="/hexo-blog/tags/JavaScript/">JavaScript</a>
                     
                   </div>
                 
@@ -312,18 +277,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/hexo-blog/2021/09/09/javascript/compress/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">前端压缩图片</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/hexo-blog/2021/09/08/git/git/">
-                        <span class="hidden-mobile">git</span>
+                      <a href="/hexo-blog/2021/09/08/git/vscode-git/">
+                        <span class="hidden-mobile">vscode的git提交流程</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
