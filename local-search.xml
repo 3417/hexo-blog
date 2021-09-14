@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>nginx使用方法</title>
+    <link href="/hexo-blog/2021/09/14/tools/nginx/"/>
+    <url>/hexo-blog/2021/09/14/tools/nginx/</url>
+    
+    <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a><a href="http://nginx.org/en/download.html">安装</a></h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">http:<span class="hljs-regexp">//</span>nginx.org<span class="hljs-regexp">/en/</span>download.html<br></code></pre></td></tr></table></figure><a id="more"></a><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol><li>执行文件夹中的nginx.exe</li><li>进入该文件中执行start nginx</li></ol><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> 启动服务 start nginx<br><span class="hljs-bullet">2.</span> 退出服务 nginx -s quit<br><span class="hljs-bullet">3.</span> 强制关闭服务 nginx -s stop<br><span class="hljs-bullet">4.</span> 重载服务 nginx -s reload<br><span class="hljs-bullet">5.</span> 验证配置文件 nginx -t<br><span class="hljs-bullet">6.</span> 使用配置文件 nginx -c &#x27;配置文件路径&#x27;<br><span class="hljs-bullet">7.</span> 使用帮助 nginx -h<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>nginx</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>nginx</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>前端压缩图片</title>
     <link href="/hexo-blog/2021/09/09/javascript/compress/"/>
     <url>/hexo-blog/2021/09/09/javascript/compress/</url>
