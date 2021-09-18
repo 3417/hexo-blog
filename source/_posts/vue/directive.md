@@ -170,7 +170,10 @@ export default throttle
 ```
 const directives = {
     xxx,
-    debounce,
+    debounce:{
+        inserted:funciton(el,binding){}
+        ....
+    },
     ....
 }
 
