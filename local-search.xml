@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>vite批量引入相关的文件</title>
+    <link href="/hexo-blog/2021/09/23/tools/vite/"/>
+    <url>/hexo-blog/2021/09/23/tools/vite/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Vite批量引入相关的文件-如vuex"><a href="#Vite批量引入相关的文件-如vuex" class="headerlink" title="Vite批量引入相关的文件(如vuex)"></a>Vite批量引入相关的文件(如vuex)</h2><a id="more"></a><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 使用globEager直接引入</span><br> <span class="hljs-keyword">const</span> modulesFiles = <span class="hljs-keyword">import</span>.meta.globEager(<span class="hljs-string">&#x27;./modules/**/*.js&#x27;</span>);<br> <span class="hljs-keyword">const</span> modules = &#123;&#125;<br> <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> modulesFiles)&#123;<br>   modules[key.replace(<span class="hljs-regexp">/(\.\/modules\/|\.js)/g</span>,<span class="hljs-string">&#x27;&#x27;</span>)] = modulesFiles[key].default<br> &#125;<br> <span class="hljs-built_in">Object</span>.keys(modules).forEach(<span class="hljs-function"><span class="hljs-params">item</span>=&gt;</span>&#123;<br>   modules[item][<span class="hljs-string">&#x27;namespaced&#x27;</span>] = <span class="hljs-literal">true</span><br> &#125;)<br><br><span class="hljs-comment">// 使用import.meta.glob动态引入(<span class="hljs-doctag">TODO:</span>动态引入无法获取到数据???)</span><br><span class="hljs-keyword">const</span> modulesFiles = <span class="hljs-keyword">import</span>.meta.glob(<span class="hljs-string">&#x27;./modules/**/*.js&#x27;</span>);<br><span class="hljs-keyword">const</span> modules = &#123;&#125;;<br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> path <span class="hljs-keyword">in</span> modulesFiles)&#123;<br>  modulesFiles[path]().then(<span class="hljs-function">(<span class="hljs-params">mod</span>) =&gt;</span> &#123;<br>    modules[path.replace(<span class="hljs-regexp">/(\.\/modules\/|\.js)/g</span>, <span class="hljs-string">&#x27;&#x27;</span>)] = mod.default<br>  &#125;)<br>&#125;<br><br></code></pre></td></tr></table></figure><h2 id="webpack的批量引入-全局注册组件"><a href="#webpack的批量引入-全局注册组件" class="headerlink" title="webpack的批量引入(全局注册组件)"></a>webpack的批量引入(全局注册组件)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//1.一个要搜索的目录，2.一个标记表示是否还搜索其子目录，3.以及一个匹配文件的正则表达式</span><br><span class="hljs-keyword">const</span> contexts = <span class="hljs-built_in">require</span>.context(<span class="hljs-string">&#x27;./components&#x27;</span>, <span class="hljs-literal">true</span>, <span class="hljs-regexp">/\.vue$/</span>)<br>contexts.keys().forEach(<span class="hljs-function"><span class="hljs-params">component</span> =&gt;</span> &#123; <br>  <span class="hljs-keyword">let</span> componentEntity = contexts(component).default <span class="hljs-comment">// 使用内置的组件名称 进行全局组件注册 </span><br>  <span class="hljs-keyword">let</span> cpn = component.replace(<span class="hljs-regexp">/^\.\//</span>, <span class="hljs-string">&#x27;&#x27;</span>).replace(<span class="hljs-regexp">/\.\w+$/</span>, <span class="hljs-string">&#x27;&#x27;</span>) <span class="hljs-comment">//不存在name则以组件名称进行注册</span><br>  Vue.component(componentEntity.name || cpn, componentEntity) <br>&#125;)<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>vite</category>
+      
+      <category>webpack</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vite</tag>
+      
+      <tag>webpack</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>nginx使用方法</title>
     <link href="/hexo-blog/2021/09/14/tools/nginx/"/>
     <url>/hexo-blog/2021/09/14/tools/nginx/</url>
