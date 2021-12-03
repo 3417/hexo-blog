@@ -14,13 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="0.配置全局的git
-配置全局的git.username12git config --global user.name &amp;quot;xxx&amp;quot;git config --global user.email &amp;quot;xxx&amp;quot;
-查看配置1git config --list // 或者 git config查看所有的配置">
+  <meta name="description" content="序言Electron是一个使用 JavaScript、HTML 和 CSS 构建桌面应用程序的框架。 嵌入 Chromium 和 Node.js 到 二进制的 Electron 允许您保持一个 JavaScript 代码代码库并创建 在Windows上运行的跨平台应用 macOS和Linux——不需要本地开发经验">
   <meta name="author" content="Dring.L">
   <meta name="keywords" content="">
   
-  <title>git - 兜兜转转-前端切图仔</title>
+  <title>Electron - 兜兜转转-前端切图仔</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -160,12 +158,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/hexo-blog/img/git/git.jpg') no-repeat center center;
+         style="background: url('/hexo-blog/img/default.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="git">
+            <span class="h2" id="subtitle" title="Electron">
               
             </span>
 
@@ -180,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-09-08 09:53" pubdate>
-        2021年09月8日 星期三 上午 09:53
+      <time datetime="2021-12-03 15:36" pubdate>
+        2021年12月3日 星期五 下午 15:36
       </time>
     </span>
   
@@ -192,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      389 字
+      445 字
     </span>
   
 
@@ -202,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      7
        分钟
     </span>
   
@@ -240,37 +238,27 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">git</h1>
+            <h1 style="display: none">Electron</h1>
             
             <div class="markdown-body">
-              <h2 id="0-配置全局的git"><a href="#0-配置全局的git" class="headerlink" title="0.配置全局的git"></a>0.配置全局的git</h2><ol>
-<li>配置全局的git.username<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs verilog">git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.name</span> <span class="hljs-string">&quot;xxx&quot;</span><br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.email</span> <span class="hljs-string">&quot;xxx&quot;</span><br></code></pre></td></tr></table></figure></li>
-<li>查看配置<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">git config --list <span class="hljs-comment">// 或者 git config查看所有的配置</span><br></code></pre></td></tr></table></figure>
+              <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>Electron是一个使用 JavaScript、HTML 和 CSS 构建桌面应用程序的框架。 嵌入 Chromium 和 Node.js 到 二进制的 Electron 允许您保持一个 JavaScript 代码代码库并创建 在Windows上运行的跨平台应用 macOS和Linux——不需要本地开发经验</p>
 <a id="more"></a>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>基于官网提供的安装方式<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span>初始化(文件夹已经创建好)<br><span class="hljs-comment"># npm init</span><br><span class="hljs-comment"># npm install --save-dev electron</span><br><span class="hljs-regexp">//</span> 添加启动命令行<br>&#123;<br>    <span class="hljs-string">&quot;script&quot;</span>:&#123;<br>        <span class="hljs-string">&quot;start&quot;</span>:<span class="hljs-string">&quot;electron .&quot;</span><br>    &#125;<br>&#125;<br><br><span class="hljs-regexp">//</span>执行启动<br><span class="hljs-comment"># npm start</span><br></code></pre></td></tr></table></figure></li>
+<li><a target="_blank" rel="noopener" href="https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/">vue版本的electron安装</a><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><span class="hljs-comment"># VueCli版本为3.x以上</span><br><span class="hljs-number">1</span>、安装：vue add electron-builder<br><span class="hljs-number">2</span>、启动：<span class="hljs-built_in">npm</span>/yarn electron:serve[可自配]<br><span class="hljs-number">3</span>、打包：<span class="hljs-built_in">npm</span>/yarn electron:build[可自配]<br></code></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<h2 id="1-解决冲突"><a href="#1-解决冲突" class="headerlink" title="1. 解决冲突"></a>1. 解决冲突</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git merge dev/ <span class="hljs-keyword">master</span><br><br><span class="hljs-title">git</span> rebase（也可以使用）<br><br>合并分支出现冲突<br>git status 查看状态<br><br>再次<br>A. git add .<br>B. git commit -m <span class="hljs-string">&quot;xxxxfix&quot;</span><br>C. git push<br></code></pre></td></tr></table></figure>
+<h2 id="设置electron淘宝镜像"><a href="#设置electron淘宝镜像" class="headerlink" title="设置electron淘宝镜像"></a>设置electron淘宝镜像</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">npm config set ELECTRON_MIRROR https:<span class="hljs-regexp">//</span>npm.taobao.org<span class="hljs-regexp">/mirrors/</span>electron/ <br></code></pre></td></tr></table></figure>
+<h2 id="文件初始化事例"><a href="#文件初始化事例" class="headerlink" title="文件初始化事例"></a>文件初始化事例</h2><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs dust"><span class="xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span></span><br><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></span><br><span class="xml">  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></span><br><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="xml">    <span class="hljs-comment">&lt;!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP --&gt;</span></span><br><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;Content-Security-Policy&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;default-src &#x27;self&#x27;; script-src &#x27;self&#x27;&quot;</span>&gt;</span></span><br><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-Content-Security-Policy&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;default-src &#x27;self&#x27;; script-src &#x27;self&#x27;&quot;</span>&gt;</span></span><br><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span></span><br><span class="xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></span><br><span class="xml">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span><br><span class="xml">    We are using Node.js <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;node-version&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>,</span><br><span class="xml">    Chromium <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;chrome-version&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>,</span><br><span class="xml">    and Electron <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;electron-version&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>.</span><br><span class="xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br><span class="xml"></span><br><span class="xml">-------------------------</span><br><span class="xml"></span><br><span class="xml">//index.js</span><br><span class="xml">const </span><span class="hljs-template-variable">&#123; app, BrowserWindow &#125;</span><span class="xml"> = require(&#x27;electron&#x27;)</span><br><span class="xml">function createWindow () </span><span class="hljs-template-variable">&#123;</span><br><span class="hljs-template-variable">  const win = new BrowserWindow(&#123;</span><br><span class="hljs-template-variable">    width: 800,</span><br><span class="hljs-template-variable">    height: 600</span><br><span class="hljs-template-variable">  &#125;</span><span class="xml">)</span><br><span class="xml"></span><br><span class="xml">  win.loadFile(&#x27;index.html&#x27;)</span><br><span class="xml">&#125;</span><br><span class="xml">app.whenReady().then(() =&gt; </span><span class="hljs-template-variable">&#123;</span><br><span class="hljs-template-variable">  createWindow()</span><br><span class="hljs-template-variable">&#125;</span><span class="xml">)</span><br><span class="xml"></span><br></code></pre></td></tr></table></figure>
 
 
-<h2 id="2-使用了代码规范提交代码commit不上请使用"><a href="#2-使用了代码规范提交代码commit不上请使用" class="headerlink" title="2.使用了代码规范提交代码commit不上请使用"></a>2.使用了代码规范提交代码commit不上请使用</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git commit --no-verify -m <span class="hljs-string">&quot;xxxx&quot;</span>  <span class="hljs-regexp">//</span>不推荐使用这种方法，但是管用<br></code></pre></td></tr></table></figure>
-
-
-<h2 id="3-使用ssh-keygen去掉密码："><a href="#3-使用ssh-keygen去掉密码：" class="headerlink" title="3.使用ssh-keygen去掉密码："></a>3.使用ssh-keygen去掉密码：</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">ssh-keygen -<span class="hljs-selector-tag">p</span> <span class="hljs-selector-attr">[-P old_pass]</span> <span class="hljs-selector-attr">[-N new_pass]</span> <span class="hljs-selector-attr">[-f keyfile]</span><br>eg: ssh-keygen -<span class="hljs-selector-tag">p</span> -P test1234 -N <span class="hljs-string">&#x27;&#x27;</span> -f ~/.ssh/id_rsa<br></code></pre></td></tr></table></figure>
-
-
-<h2 id="4-清除git的账户和密码"><a href="#4-清除git的账户和密码" class="headerlink" title="4.清除git的账户和密码"></a>4.清除git的账户和密码</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span>清除掉缓存在git中的用户名和密码<br>git credential-manager uninstall<br></code></pre></td></tr></table></figure>
-
-
-<h2 id="5-保存项目的用户名和密码"><a href="#5-保存项目的用户名和密码" class="headerlink" title="5.保存项目的用户名和密码"></a>5.保存项目的用户名和密码</h2><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs arduino">git config user.name<br>git config user.email<br><br>git config credential.helper store  <span class="hljs-comment">//缓存用户信息</span><br><br><br>git pull -r  <span class="hljs-comment">//直接查看拉取数据是否还是需要输入用户名和密码</span><br><br></code></pre></td></tr></table></figure>
-<h2 id="6-删除git-stash内容-缓存的内容"><a href="#6-删除git-stash内容-缓存的内容" class="headerlink" title="6.删除git stash内容(缓存的内容)"></a>6.删除git stash内容(缓存的内容)</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs awk">git stash list <span class="hljs-regexp">//</span>查看内容<br><br>git stash clear <span class="hljs-regexp">//</span>删除全部内容<br><br>git stash drop stash@&#123;<span class="hljs-number">0</span>&#125; <span class="hljs-regexp">//</span>删除第一个队列<br><br></code></pre></td></tr></table></figure>
-<h2 id="7-git本地commit撤销"><a href="#7-git本地commit撤销" class="headerlink" title="7.git本地commit撤销"></a>7.git本地commit撤销</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs perl">git <span class="hljs-keyword">reset</span> HEAD~<span class="hljs-number">1</span><br>OR<br>git <span class="hljs-keyword">reset</span> HEAD~ <span class="hljs-regexp">//</span>回滚全部<br></code></pre></td></tr></table></figure>
-<h2 id="8-git-merge-合并分支"><a href="#8-git-merge-合并分支" class="headerlink" title="8.git merge 合并分支"></a>8.git merge 合并分支</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git chekout <span class="hljs-keyword">master</span><br><br><span class="hljs-title">git</span> pull origin <span class="hljs-keyword">master</span><br><br><span class="hljs-title">git</span> merge dev<br><br>git status<br><br>git  push<br></code></pre></td></tr></table></figure>
-<h2 id="9-git强制提交"><a href="#9-git强制提交" class="headerlink" title="9.git强制提交"></a>9.git强制提交</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git push -f origin <span class="hljs-keyword">master</span>  <br><span class="hljs-title">//origin</span>远程仓库名，<span class="hljs-literal">master</span>分支名，-f为force，意为：强行、强制。<br></code></pre></td></tr></table></figure>
-
-<h2 id="10-git拉取某个分支"><a href="#10-git拉取某个分支" class="headerlink" title="10.git拉取某个分支"></a>10.git拉取某个分支</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">-b</span> xxx.git<br></code></pre></td></tr></table></figure>
-
-<h2 id="11-回滚"><a href="#11-回滚" class="headerlink" title="11.回滚"></a>11.回滚</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-number">1</span>、git log <span class="hljs-regexp">//</span>获取提交的id日志<br><br><span class="hljs-number">2</span>、git reset --hard <span class="hljs-string">&quot;id&quot;</span> <span class="hljs-regexp">//</span>本地回滚<br><br><span class="hljs-number">3</span>、git push -f <span class="hljs-regexp">//</span>远端回滚版本<br></code></pre></td></tr></table></figure>
+<h2 id="打包electron会出现下载包非常慢的情况-cmd翻墙可忽视"><a href="#打包electron会出现下载包非常慢的情况-cmd翻墙可忽视" class="headerlink" title="打包electron会出现下载包非常慢的情况(cmd翻墙可忽视)"></a>打包electron会出现下载包非常慢的情况(cmd翻墙可忽视)</h2><ol>
+<li>在C:\Users\xxxx\AppData\Local\electron-builder\Cache里面新建nsis和winCodeSign文件夹存放从github下载后解压的文件</li>
+<li>链接路径为执行electron打包时给的路径</li>
+</ol>
+<h4 id="electron相关配置"><a href="#electron相关配置" class="headerlink" title="electron相关配置"></a><a target="_blank" rel="noopener" href="https://blog.yasking.org/a/zh-install-electron-development.html">electron相关配置</a></h4>
             </div>
             <hr>
             <div>
@@ -279,7 +267,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/hexo-blog/categories/git/">git</a>
+                      <a class="hover-with-bg" href="/hexo-blog/categories/electron/">electron</a>
                     
                   </div>
                 
@@ -287,7 +275,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/hexo-blog/tags/git/">git</a>
+                      <a class="hover-with-bg" href="/hexo-blog/tags/electron/">electron</a>
                     
                   </div>
                 
@@ -304,18 +292,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/hexo-blog/2021/09/08/git/vscode-git/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">vscode的git提交流程</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/hexo-blog/2021/09/07/vue/directive/">
-                        <span class="hidden-mobile">Vue常用的一些指令</span>
+                      <a href="/hexo-blog/2021/11/15/vue/observable/">
+                        <span class="hidden-mobile">Vue.observable</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
