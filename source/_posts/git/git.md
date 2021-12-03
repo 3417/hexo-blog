@@ -100,7 +100,7 @@ git push -f origin master
 //origin远程仓库名，master分支名，-f为force，意为：强行、强制。
 ```
 
-## 10.git拉去某个分支
+## 10.git拉取某个分支
 ```
 git clone -b xxx.git
 ```

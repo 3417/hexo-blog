@@ -166,6 +166,25 @@ function throttleIn (fun:any, delay:number){
 export default throttle
 ```
 
+## v-fixed(全局指令注册)
+```
+  Vue.directives:{
+    fixed:{
+      inserted(){
+        let scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+        document.body.style.cssText +='position:fixed;overflow:hidden;width:100%;top:-'+scrollTop+'px;'
+      },
+      unbind(){
+        let body = document.body,top = body.style.top;
+        document.body.scrollTop = document.documentElement.scrollTop = -parseInt(top);
+        body.style.position = '';
+        body.style.top = '';
+        body.style.overlfow = 'initial';
+      }
+    }
+  }
+```
+
 ## 批量注册自定义指令
 ```
 const directives = {
