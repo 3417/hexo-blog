@@ -14,13 +14,29 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="生活不能只有眼前的苟且,还得有诗和远方.">
+  <meta name="description" content="项目中或者实践中遇到的问题点解析">
   <meta name="author" content="Dring.L">
   <meta name="keywords" content="">
   
-  <title>归档 - 兜兜转转-前端切图仔</title>
+  <title>遇到的问题记录本 - 兜兜转转-前端切图仔</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/hexo-blog/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -48,7 +64,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -142,14 +158,64 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/hexo-blog/img/archive.jpg') no-repeat center center;
+         style="background: url('/hexo-blog/img/default.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="归档">
+            <span class="h2" id="subtitle" title="遇到的问题记录本">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Dring.L
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-12-22 14:00" pubdate>
+        2021年12月22日 星期三 下午 14:00
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      65 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      1
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
 
             
           </div>
@@ -162,76 +228,83 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 33 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2021</p>
-    
-    <a href="/hexo-blog/2021/09/08/git/git/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">git</span>
-      <time style="float: right;">09-08</time>
-    </a>
-  
-    
-    <a href="/hexo-blog/2021/09/07/vue/directive/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Vue常用的一些指令</span>
-      <time style="float: right;">09-07</time>
-    </a>
-  
-    
-    <a href="/hexo-blog/2021/09/03/practice/practice/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">项目中遇到的问题集合</span>
-      <time style="float: right;">09-03</time>
-    </a>
-  
-    
-    <a href="/hexo-blog/2021/09/03/tools/npmUpdate/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">升级package.json中的包版本</span>
-      <time style="float: right;">09-03</time>
-    </a>
-  
-    
-    <a href="/hexo-blog/2021/06/14/vue/Vue-fn/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Vue3.xx</span>
-      <time style="float: right;">06-14</time>
-    </a>
-  
-    
-    <a href="/hexo-blog/2021/04/20/tools/qiankun/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">乾坤微前端</span>
-      <time style="float: right;">04-20</time>
-    </a>
-  
-</div>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">遇到的问题记录本</h1>
+            
+            <div class="markdown-body">
+              <h2 id="项目中或者实践中遇到的问题点解析"><a href="#项目中或者实践中遇到的问题点解析" class="headerlink" title="项目中或者实践中遇到的问题点解析"></a>项目中或者实践中遇到的问题点解析</h2><a id="more"></a>
 
 
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/hexo-blog/archives/2021/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/hexo-blog/archives/2021/">1</a><span class="page-number current">2</span>
-    </span>
-  </nav>
+<h2 id="iframe问题集合"><a href="#iframe问题集合" class="headerlink" title="iframe问题集合"></a>iframe问题集合</h2><ol>
+<li>iframe的src可以当作get请求  传递参数  获取后台返回的html</li>
+<li>iframe只有onload的时候才会使用postMessage</li>
+<li>iframe onload 获取DOM会报跨域的问题</li>
+</ol>
+<p>…(待续)</p>
 
-
-
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/hexo-blog/2021/12/22/weixin/wx-question/">
+                        <span class="hidden-mobile">微信小程序爬坑记录</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -335,9 +408,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
 
 
 
