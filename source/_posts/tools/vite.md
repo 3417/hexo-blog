@@ -1,8 +1,8 @@
 ---
 title: vite批量引入相关的文件
 date: 2021-09-23 13:58:21
-tags: [vite,webpack]
-categories: [vite,webpack]
+tags: [vite]
+categories: [vite]
 ---
 
 

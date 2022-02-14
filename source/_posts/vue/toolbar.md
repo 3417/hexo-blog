@@ -1,8 +1,7 @@
 ---
 title: 前端当前主流的包管理工具(npm yarn pnpm)
 date: 2019-12-26 14:06:19
-tag: [npm,yarn,pnpm]
-categories: [npm,yarn,pnpm]
+categories: ['project']
 ---
 
 
