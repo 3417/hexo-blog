@@ -153,16 +153,12 @@
       
       <category>vite</category>
       
-      <category>webpack</category>
-      
     </categories>
     
     
     <tags>
       
       <tag>vite</tag>
-      
-      <tag>webpack</tag>
       
     </tags>
     
@@ -305,28 +301,10 @@
     
     <categories>
       
-      <category>JavaScript</category>
-      
-      <category>Vue</category>
-      
-      <category>sass</category>
-      
-      <category>TypeScript</category>
+      <category>project</category>
       
     </categories>
     
-    
-    <tags>
-      
-      <tag>JavaScript</tag>
-      
-      <tag>sass</tag>
-      
-      <tag>Vue</tag>
-      
-      <tag>TypeScript</tag>
-      
-    </tags>
     
   </entry>
   
@@ -592,20 +570,10 @@
     
     <categories>
       
-      <category>less</category>
-      
-      <category>sass</category>
+      <category>css</category>
       
     </categories>
     
-    
-    <tags>
-      
-      <tag>less</tag>
-      
-      <tag>sass</tag>
-      
-    </tags>
     
   </entry>
   
@@ -721,18 +689,10 @@
     
     <categories>
       
-      <category>Vue</category>
-      
       <category>scss</category>
       
     </categories>
     
-    
-    <tags>
-      
-      <tag>Vue</tag>
-      
-    </tags>
     
   </entry>
   
@@ -747,8 +707,6 @@
     
     
     <categories>
-      
-      <category>Vue</category>
       
       <category>VueCli</category>
       
@@ -775,24 +733,10 @@
     
     <categories>
       
-      <category>npm</category>
-      
-      <category>yarn</category>
-      
-      <category>pnpm</category>
+      <category>project</category>
       
     </categories>
     
-    
-    <tags>
-      
-      <tag>npm</tag>
-      
-      <tag>yarn</tag>
-      
-      <tag>pnpm</tag>
-      
-    </tags>
     
   </entry>
   
