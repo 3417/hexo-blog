@@ -14,11 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="项目中或者实践中遇到的问题点解析">
+  <meta name="description" content="发布订阅模式通过 on 方法注册事件，trigger 方法触发事件，来达到事件之间的松散解耦，并且额外添加了 once 和 off 辅助函数用于注册只触发一次的事件以及注销事件.（相关知识网站总结）">
   <meta name="author" content="Mesh">
   <meta name="keywords" content="">
   
-  <title>遇到的问题记录本 - 兜兜转转-前端切图仔</title>
+  <title>发布订阅 - 兜兜转转-前端切图仔</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="遇到的问题记录本">
+            <span class="h2" id="subtitle" title="发布订阅">
               
             </span>
 
@@ -178,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-12-22 14:00" pubdate>
-        2021年12月22日 星期三 下午 14:00
+      <time datetime="2022-02-21 17:21" pubdate>
+        2022年02月21日 星期一 下午 17:21
       </time>
     </span>
   
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      65 字
+      234 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      3
        分钟
     </span>
   
@@ -238,24 +238,32 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">遇到的问题记录本</h1>
+            <h1 style="display: none">发布订阅</h1>
             
             <div class="markdown-body">
-              <h2 id="项目中或者实践中遇到的问题点解析"><a href="#项目中或者实践中遇到的问题点解析" class="headerlink" title="项目中或者实践中遇到的问题点解析"></a>项目中或者实践中遇到的问题点解析</h2><a id="more"></a>
-
-
-<h2 id="iframe问题集合"><a href="#iframe问题集合" class="headerlink" title="iframe问题集合"></a>iframe问题集合</h2><ol>
-<li>iframe的src可以当作get请求  传递参数  获取后台返回的html</li>
-<li>iframe只有onload的时候才会使用postMessage</li>
-<li>iframe onload 获取DOM会报跨域的问题</li>
-</ol>
-<p>…(待续)</p>
+              <h2 id="发布订阅模式"><a href="#发布订阅模式" class="headerlink" title="发布订阅模式"></a>发布订阅模式</h2><p>通过 on 方法注册事件，trigger 方法触发事件，来达到事件之间的松散解耦，并且额外添加了 once 和 off 辅助函数用于注册只触发一次的事件以及注销事件.（相关知识网站总结）</p>
+<a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//定义</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EventEmitter</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span>&#123;<br>        <span class="hljs-built_in">this</span>.cache = &#123;&#125;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-title">on</span>(<span class="hljs-params">name,fn</span>)</span>&#123;<br>        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.cache[name])&#123;<br>            <span class="hljs-built_in">this</span>.cache[name].push(fn)<br>        &#125;<span class="hljs-keyword">else</span>&#123;<br>            <span class="hljs-built_in">this</span>.cache[name] = [fn]<br>        &#125;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-title">off</span>(<span class="hljs-params">name,fn</span>)</span>&#123;<br>        <span class="hljs-keyword">const</span> tasks = <span class="hljs-built_in">this</span>.cache[name]<br>        <span class="hljs-keyword">if</span>(tasks)&#123;<br>            <span class="hljs-keyword">const</span> index = tasks.findIndex(<span class="hljs-function">(<span class="hljs-params">f</span>)=&gt;</span>f === fn || f.callback === fn);<br>            <span class="hljs-keyword">if</span>(index &gt;=<span class="hljs-number">0</span>)&#123;<br>                tasks.splice(index,<span class="hljs-number">1</span>)<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-title">emit</span>(<span class="hljs-params">name,once = <span class="hljs-literal">false</span></span>)</span>&#123;<br>        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.cache[name])&#123;<br>            <span class="hljs-keyword">const</span> tasks = <span class="hljs-built_in">this</span>.cache[name].slice()<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> fn <span class="hljs-keyword">of</span> tasks)&#123;<br>                fn()<br>            &#125;<br>            <span class="hljs-keyword">if</span>(once)&#123;<br>                <span class="hljs-keyword">delete</span> <span class="hljs-built_in">this</span>.cache[name]<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">//使用</span><br><span class="hljs-keyword">const</span> eventBus = <span class="hljs-keyword">new</span> EventEmitter();<br><span class="hljs-keyword">const</span> task1 = <span class="hljs-function">()=&gt;</span>&#123;<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;task1&#x27;</span>)&#125;<br><span class="hljs-keyword">const</span> task2 = <span class="hljs-function">()=&gt;</span>&#123;<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;task2&#x27;</span>)&#125;<br><br>eventBus.on(<span class="hljs-string">&#x27;task&#x27;</span>,task1);<br>eventBus.on(<span class="hljs-string">&#x27;task&#x27;</span>,task2);<br>eventBus.off(<span class="hljs-string">&#x27;task&#x27;</span>,task1);<br><span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">()=&gt;</span>&#123;<br>    eventBus.emit(<span class="hljs-string">&#x27;task&#x27;</span>);<br>&#125;,<span class="hljs-number">1000</span>)<br></code></pre></td></tr></table></figure>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/hexo-blog/categories/JavaScript/">JavaScript</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/hexo-blog/tags/eventEmitter/">eventEmitter</a>
+                    
+                  </div>
                 
               </div>
               
@@ -270,9 +278,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/hexo-blog/2022/02/21/javascript/EventEmitter/">
+                      <a href="/hexo-blog/2022/02/22/javascript/sortJs/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">发布订阅</span>
+                        <span class="hidden-mobile">前端排序</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -280,8 +288,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/hexo-blog/2021/12/22/weixin/wx-question/">
-                        <span class="hidden-mobile">微信小程序爬坑记录</span>
+                      <a href="/hexo-blog/2021/12/22/question/">
+                        <span class="hidden-mobile">遇到的问题记录本</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
