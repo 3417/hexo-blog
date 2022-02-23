@@ -15,11 +15,6 @@
   hexo deploy==>(hexo g -d)
 
 ```
-## gitee
-```
-gitee:http://softwared.gitee.io/hexo-blog/
-```
-
 ## github
 ```
 github:https://3417.github.io/hexo-blog/
