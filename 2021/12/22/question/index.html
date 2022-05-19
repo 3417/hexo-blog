@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      65 字
+      408 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      5
        分钟
     </span>
   
@@ -249,6 +249,8 @@
 <li>iframe只有onload的时候才会使用postMessage</li>
 <li>iframe onload 获取DOM会报跨域的问题</li>
 </ol>
+<h2 id="相关正则"><a href="#相关正则" class="headerlink" title="相关正则"></a>相关正则</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span>正则替换多个连续的字符为一个字符<br>const uniq = (str) =&gt;&#123;<br>    return str.replace(<span class="hljs-regexp">/(\w)\1+/g</span>,<span class="hljs-string">&#x27;$1&#x27;</span>)<br>&#125;<br><br><span class="hljs-regexp">//</span>正则匹配某个字符之前(如%之前)<br><span class="hljs-regexp">/^[^%]+\s?/</span><br><br><span class="hljs-regexp">//</span>必须包含数字大小写字母和特殊字符，长度为<span class="hljs-number">8</span>-<span class="hljs-number">30</span>位<br><span class="hljs-regexp">/(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*\d.*)(?=.*[~!@#$%^&amp;*]).&#123;8,30&#125;/</span><br><span class="hljs-regexp">/(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[~!@#$%^&amp;*]).&#123;8,30&#125;/</span><br><br><span class="hljs-regexp">//</span>千分位正则兼容小数点<br><span class="hljs-regexp">/(?&lt;=\b(?&lt;!\.)\d*)\B(?=(\d&#123;3&#125;)+(?=\b))/g</span><br><span class="hljs-regexp">/\B(?=(\d&#123;3&#125;)+(?=\b))(?&lt;=\b(?&lt;!\.)\d*)/g</span><br><br><span class="hljs-regexp">//</span> 只允许输入数字、字符及符号（特殊符号除外），至少包含数字和字母，最少<span class="hljs-number">6</span>个字符，不超过<span class="hljs-number">20</span>字符；<br><span class="hljs-regexp">/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]&#123;6,20&#125;$/</span>; <br><span class="hljs-regexp">//</span>匹配包含至少一个字母<br>(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]<br><br><span class="hljs-regexp">//</span>匹配数字和小数,只有一个小数点<br><span class="hljs-regexp">/^\d+$|^\d+[.]?\d+$/</span><br><br><span class="hljs-regexp">//</span>限制只能输入七位整数两位小数（可自己拓展）<br><span class="hljs-regexp">/(^\d&#123;1,7&#125;$)|(^\d&#123;1,7&#125;?\.\d&#123;1,2&#125;$)/</span><br><br><span class="hljs-regexp">//</span>只能输入症整数<br><span class="hljs-regexp">/^[1-9]\d*$/</span><br><br><span class="hljs-regexp">//</span>JS实现手机号码中间为星号<br>str.replace(<span class="hljs-regexp">/(\d&#123;3&#125;)\d&#123;4&#125;(\d&#123;4&#125;)/</span>,<span class="hljs-string">&#x27;$1****$2&#x27;</span>)<br><br><span class="hljs-regexp">//</span>替换<br><span class="hljs-string">&#x27;A2&#x27;</span>.replace(<span class="hljs-regexp">/([A-z]+)(\d+)/g</span>, (_, <span class="hljs-variable">$1</span>, <span class="hljs-variable">$2</span>) =&gt; <span class="hljs-variable">$1</span>.repeat(<span class="hljs-variable">$2</span>)) <span class="hljs-regexp">//</span>AA<br><br><span class="hljs-regexp">//</span>正则去除字符串后面的时分秒<br>var date = <span class="hljs-string">&quot;2018-10-08 00:00:00&quot;</span>;<br>var newDate=<span class="hljs-regexp">/\d&#123;4&#125;-\d&#123;1,2&#125;-\d&#123;1,2&#125;/g</span>.exec(date)<br></code></pre></td></tr></table></figure>
+
 <p>…(待续)</p>
 
             </div>
