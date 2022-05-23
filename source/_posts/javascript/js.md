@@ -48,6 +48,15 @@ function guid(){
     }
     return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
 }
+eg4:
+function getUuid(len = 32){
+    const S4 = () => Math.random().toString(16).substring(2);
+    let res = "";
+    while(res.length < len){
+        res += S4().substring(0,len-res.length);
+    }
+    return res;
+}
 ```
 
 ### 二维数组
@@ -93,4 +102,17 @@ function reverseMatrix(sourceArr) {
 输入：[[1,2,3],[2,3,4],[5,6,7]]
 输出：[[1,2,4],[2,3,6],[3,4,7]] 
 
+```
+
+## 获取文本的确切宽度
+
+```
+function getActualWidthOfChars(text,options = {}){
+    const {size = 14,family = 'Microsoft YaHei'} = options;
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext("2d");
+    ctx.font = `${size}px ${family}`;
+    const metrics = ctx.measureText(text);
+    return Math.abs(metrics.actualBoundingBoxLeft) + Math.abs(metrics.actualBoundingBoxRight);
+}
 ```
