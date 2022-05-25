@@ -14,11 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="冒泡排序依次比较相邻的两个元素，如果后一个小于前一个，则交换，这样从头到尾一次，就将最大的放到了末尾">
+  <meta name="description" content="生活不能只有眼前的苟且,还得有诗和远方.">
   <meta name="author" content="Mesh">
   <meta name="keywords" content="">
   
-  <title>前端排序 - 兜兜转转-前端切图仔</title>
+  <title>JS加减乘除精度丢失问题 - 兜兜转转-前端切图仔</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="前端排序">
+            <span class="h2" id="subtitle" title="JS加减乘除精度丢失问题">
               
             </span>
 
@@ -178,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-02-22 14:21" pubdate>
-        2022年02月22日 星期二 下午 14:21
+      <time datetime="2022-05-25 14:02" pubdate>
+        2022年05月25日 星期三 下午 14:02
       </time>
     </span>
   
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      246 字
+      303 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      5
        分钟
     </span>
   
@@ -238,16 +238,10 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">前端排序</h1>
+            <h1 style="display: none">JS加减乘除精度丢失问题</h1>
             
             <div class="markdown-body">
-              <h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>依次比较相邻的两个元素，如果后一个小于前一个，则交换，这样从头到尾一次，就将最大的放到了末尾</p>
-<a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bubbleSort</span>(<span class="hljs-params">arr</span>)</span>&#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>;i&lt;arr.length-<span class="hljs-number">1</span>;i++)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> j=<span class="hljs-number">0</span>;j&lt;arr.length;j++)&#123;<br>            <span class="hljs-keyword">if</span>(arr[j] &lt; arr[j+<span class="hljs-number">1</span>])&#123; <span class="hljs-comment">//此处控制是否升序和降序</span><br>                <span class="hljs-keyword">let</span> temp = arr[j+<span class="hljs-number">1</span>];<br>                arr[j+<span class="hljs-number">1</span>] = arr[j];<br>                arr[j] = templ;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> arr;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs nix">function selectSort(arr)&#123;<br>    <span class="hljs-keyword">let</span> <span class="hljs-attr">len</span> = arr.length;<br>    <span class="hljs-keyword">let</span> minIndex,templ;<br>    for(<span class="hljs-keyword">let</span> <span class="hljs-attr">i=0;i&lt;len-1;i++)&#123;</span><br>        <span class="hljs-attr">minIndex</span> = i;<br>        for(<span class="hljs-keyword">let</span> <span class="hljs-attr">j=i+1;j&lt;len;j++)&#123;</span><br>            <span class="hljs-keyword">if</span>(arr[j] &lt; arr[minIndex])&#123; //控制升序和降序<br>                <span class="hljs-attr">minIndex</span> = j;<br>            &#125;<br>        &#125;<br>        <span class="hljs-attr">templ</span> = arr[i];<br>        arr[i] = arr[minIndex];<br>        arr[minIndex] = templ;<br>    &#125;<br>    return arr;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">function</span> insertSort(arr)&#123;<br>    let len = arr.length;<br>    let preIndex,<span class="hljs-keyword">current</span>;<br>    <span class="hljs-keyword">for</span>(let i=<span class="hljs-number">1</span>;i&lt;len;i++)&#123;<br>        preIndex = i <span class="hljs-number">-1</span>;<br>        <span class="hljs-keyword">current</span> = arr[i];<br>        <span class="hljs-keyword">while</span>(preIndex &gt;= <span class="hljs-number">0</span> &amp;&amp; arr[preIndex] &gt; <span class="hljs-keyword">current</span>)&#123;  //大于<span class="hljs-keyword">current</span>为升序 小于<span class="hljs-keyword">current</span>为降序<br>            arr[preIndex+<span class="hljs-number">1</span>] = arr[preIndex];<br>            preIndex<span class="hljs-comment">--;</span><br>        &#125;<br>        arr[preIndex+<span class="hljs-number">1</span>] = <span class="hljs-keyword">current</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> arr;<br>&#125;<br></code></pre></td></tr></table></figure>
-
+              <h2 id="JS-加减乘除精度丢失处理（来源：博客园大佬）"><a href="#JS-加减乘除精度丢失处理（来源：博客园大佬）" class="headerlink" title="JS 加减乘除精度丢失处理（来源：博客园大佬）"></a>JS 加减乘除精度丢失处理（来源：博客园大佬）</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs stata">export <span class="hljs-keyword">const</span> calc = &#123;<br>    &lt;!-- 加法函数(<span class="hljs-keyword">d</span>:保留小数的位数) --&gt;<br>    Add(arg1,arg2)&#123;<br>        arg1 = arg1.<span class="hljs-keyword">toString</span>(),arg2 = arg2.<span class="hljs-keyword">toString</span>();<br>        let arg1Arr = arg1.<span class="hljs-keyword">split</span>(<span class="hljs-string">&quot;.),arg2Arr = arg2.split(&quot;</span>.<span class="hljs-string">&quot;),d1 = arg1Arr.length == 2 ? argArr[1] : &quot;</span>&quot;,d2 = arg2Arr.length == 2? arg2Arr[1] : &#x27;&#x27;;<br>        let maxlen = Math.<span class="hljs-built_in">max</span>(d1.length,d2.length);<br>        let <span class="hljs-keyword">m</span> = Math.pow(10,maxLen);<br>        let result = Number(((arg1 *<span class="hljs-keyword">m</span>+arg2*<span class="hljs-keyword">m</span>)/<span class="hljs-keyword">m</span>).toFixed(maxLen));<br>        let <span class="hljs-keyword">d</span> = arguments[2];<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> <span class="hljs-keyword">d</span> === <span class="hljs-string">&quot;number&quot;</span> ? Number((result).toFixed(<span class="hljs-keyword">d</span>)) : result;<br>    &#125;<br>    &lt;!-- 减法函数 --&gt;<br>    Sub(arg1,arg2)&#123;<br>        <span class="hljs-keyword">return</span> this.Add(arg1,-Number(arg2),arguments[2])<br>    &#125;<br>    &lt;!-- 乘法函数 --&gt;<br>    Mul(arg1,arg2)&#123;<br>      let r1 = arg1.<span class="hljs-keyword">toString</span>(), r2 = arg2.<span class="hljs-keyword">toString</span>(), <span class="hljs-keyword">m</span>, resultVal, <span class="hljs-keyword">d</span> = arguments[2];<br>      <span class="hljs-keyword">m</span> = (r1.<span class="hljs-keyword">split</span>(<span class="hljs-string">&quot;.&quot;</span>)[1] ? r1.<span class="hljs-keyword">split</span>(<span class="hljs-string">&quot;.&quot;</span>)[1].length : 0) + (r2.<span class="hljs-keyword">split</span>(<span class="hljs-string">&quot;.&quot;</span>)[1] ? r2.<span class="hljs-keyword">split</span>(<span class="hljs-string">&quot;.&quot;</span>)[1].length : 0);<br>      resultVal = Number(r1.<span class="hljs-keyword">replace</span>(<span class="hljs-string">&quot;.&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)) * Number(r2.<span class="hljs-keyword">replace</span>(<span class="hljs-string">&quot;.&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)) / Math.pow(10, <span class="hljs-keyword">m</span>);<br>      <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> <span class="hljs-keyword">d</span> !== <span class="hljs-string">&quot;number&quot;</span> ? Number(resultVal) : Number(resultVal.toFixed(parseInt(<span class="hljs-keyword">d</span>)));<br>    &#125;<br>    &lt;!-- 除法函数 --&gt;<br>    Div(arg1,arg2)&#123;<br>      let r1 = arg1.<span class="hljs-keyword">toString</span>(), r2 = arg2.<span class="hljs-keyword">toString</span>(), <span class="hljs-keyword">m</span>, resultVal, <span class="hljs-keyword">d</span> = arguments[2];<br>      <span class="hljs-keyword">m</span> = (r2.<span class="hljs-keyword">split</span>(<span class="hljs-string">&quot;.&quot;</span>)[1] ? r2.<span class="hljs-keyword">split</span>(<span class="hljs-string">&quot;.&quot;</span>)[1].length : 0) - (r1.<span class="hljs-keyword">split</span>(<span class="hljs-string">&quot;.&quot;</span>)[1] ? r1.<span class="hljs-keyword">split</span>(<span class="hljs-string">&quot;.&quot;</span>)[1].length : 0);<br>      resultVal = Number(r1.<span class="hljs-keyword">replace</span>(<span class="hljs-string">&quot;.&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)) / Number(r2.<span class="hljs-keyword">replace</span>(<span class="hljs-string">&quot;.&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)) * Math.pow(10, <span class="hljs-keyword">m</span>);<br>      <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> <span class="hljs-keyword">d</span> !== <span class="hljs-string">&quot;number&quot;</span> ? Number(resultVal) : Number(resultVal.toFixed(parseInt(<span class="hljs-keyword">d</span>)));<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">//使用</span><br>calc.add(arg1,arg2,<span class="hljs-keyword">d</span>)<br>OR<br>calc.add(arg1,arg2)<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -260,6 +254,13 @@
                     
                   </div>
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/hexo-blog/tags/JavaScript/">JavaScript</a>
+                    
+                  </div>
                 
               </div>
               
@@ -274,18 +275,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/hexo-blog/2022/05/25/javascript/bignumber/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">JS加减乘除精度丢失问题</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/hexo-blog/2022/02/21/javascript/EventEmitter/">
-                        <span class="hidden-mobile">发布订阅</span>
+                      <a href="/hexo-blog/2022/02/22/javascript/sortJs/">
+                        <span class="hidden-mobile">前端排序</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
