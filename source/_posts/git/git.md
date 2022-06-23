@@ -113,3 +113,16 @@ git clone -b xxx.git
 
 3、git push -f //远端回滚版本
 ```
+
+## 12.git rebase
+```
+编辑完成后，可以点ESC 在输入:wq做保存，不想保存的话就输入:q!
+结束上面流程后在查看一次log commit记录
+```
+
+## 13.git 使用.gitignore忽略已经提交的文件或者文件夹
+```
+git rm -r --cached <projectName>
+git commit -m "<备注信息>"
+git push //提交信息
+```
