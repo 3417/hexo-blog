@@ -203,3 +203,182 @@ xhr.readyState //获取当前的AJAX引擎状态
 xhr.status //获取Http状态码
 xhr.responseText //获取响应的数据，字符串，需要parse一下
 ```
+
+
+# 2024年06月
+
+
+## 防抖节流函数(高频事件)
+
+```
+    防抖：  触发高频事件后n秒后执行一次，如果n秒内再次触发，则重新计时
+    function debounce(fn, delay) {
+        let timer = null;
+        return function () {
+            if (timer) clearTimeout(timer);
+            timer = setTimeout(() => {
+                fn.apply(this, arguments);
+            }, delay);
+        };
+    }
+
+    节流：  触发高频事件后n秒内函数只能执行一次，如果n秒内连续触发，只有一次生效
+    function throttle(fn, delay) {
+        let isThre = false;
+        return function () {
+            if(!isThre){
+                fn.apply(this, arguments);
+                isThre = true;
+                setTimeout(function() {  
+                   return isThre = false;  
+                 }, delay);
+            } 
+        };
+    }
+
+
+
+```
+
+
+## 为什么vue/react项目中要使用key，有什么作用？
+
+key是给每一个vnode的唯一id  可以更依赖key更准确更快的拿到oldVnode中对应的vnode节点
+
+## ['1','2','3'].map(praseInt)
+
+结果：log: [1,NaN,NaN]
+
+## bind call apply区别
+
+1. 三者都可以改变函数的this对象指向
+2. 三者第一个参数都是this的指向对象，如果没有这个参数或参数为undefined/null，则默认指向全局window
+3. 三者都可以传参数，但是apply是数组或类数组，而call是参数列表，且apply和call是一次性传入参数，而bind可以分为多次传入
+4. bind是返回绑定this之后的函数，apply、call则是立即执行
+
+## es5和es6区别
+
+1. 变量声明方式不同
+2. 块级作用域
+3. 箭头函数
+4. 字符串模板
+5. 类和继承
+6. 模块化
+7. 解构赋值
+9. Promise
+10. 新增Set/Map/Symbol方法等
+
+
+## 详解作用域链、原型链、闭包
+
+1. JavaScript的作用域我们可以有效访问变量或函数的区域，JS具有三种类型的作用域：全局作用域、函数作用域和块级作用域
+2. 原型链：JavaScript中每个函数都有一个prototype属性，这个属性指向函数的原型对象，原型对象也是个对象，原型对象有一个constructor属性，指向构造函数，原型对象可以添加共有属性和方法，实例对象可以访问原型对象上的属性和方法
+3. 闭包：闭包是函数和函数外部变量的引用，闭包可以访问函数外部变量，函数外部变量可以访问闭包变量
+4. 作用域链：内部函数访问外部函数的变量，采取的是链式查找的方法来决定那个结构，这种结构称之为作用域链
+
+## 关于this
+
+注：this是执行上下文中的一个属性，他指向最后一次调用这个方法的对象，在实际开发中 this的指向可以通过四种调用模式来判断
+1. 函数调用模式：this指向全局对象
+2. 方法调用模式：this指向调用方法的对象
+3. 构造函数调用模式：this指向构造函数的实例对象
+4. apply/call/bind调用模式：this指向第一个参数
+
+## 异步编程的实现方式
+
+1. 回调函数
+2. Promise
+3. Generator
+4. async/await  是Generator和promise实现的一种自动执行的语法糖
+
+
+## 相关算法
+
+```
+    回文字符含义：指的是正着读和倒着读都一样的字符串
+    function isPalindrome(str){
+    return str === str.split('').reverse().join('');
+    }
+    console.log(isPalindrome('madam'));
+
+      1. 实现字符串得排列组合
+      function permute(str,prefix=''){
+        if(!str) return '';
+        for(let i=0;i<str.length;i++){
+          permute(str.slice(0,i)+str.slice(i+1),prefix+str[i]);
+        }
+      }
+      2.找出数组中最大的值、最小值、地k大/小的元素等
+
+      // 最大值
+      const max = Math.max(...arr);
+      // 最小值
+      const min = Math.min(...arr);
+      //第k大的元素
+      function findRandMax(arr,k){
+        const sortList = arr.sort((a, b) => a - b);
+        return sortList[k-1];
+      }
+
+      3.数组排序算法，如快速排序、归并排序
+      
+      //快速排序算法（是一种高效的排序算法，采用分治策略来把一个序列分为较小和较大的两个子排序，然后在递归地对子序列进行排序）
+      function quickSort(arr){
+        if(arr.length <= 1) return arr;
+
+        const pivot =arr[0];
+        const left = [];
+        const right = [];
+        for(let i=1;i<arr.length;i++){
+          if(arr[i] < pivot){
+            left.push(arr[i]);
+          }else{
+            right.push(arr[i])
+          }
+        }
+        return quickSort(left).concat(pivot,quickSort(right));
+      }
+
+      //归并排序算法(归并算法也是基于一种分治法的排序算法，他将数组分成两半，递归地排序每一半，然后将结果合并成一个有序的数组)
+      const merge = (left,right)=>{
+        let result = [],i=0,j=0;
+        while(i<left.length && j<right.length){
+            if(left[i] < right[j]){
+              result.push(left[i]);
+              i++;
+            }else{
+              result.push(right[j]);
+              j++;
+            }
+        }
+        return result.concat(left.slice(i)).concat(right.slice(j));
+
+      }
+      function mergeSort(arr){
+        if(arr.length <= 1) return arr;
+        const mid = Math.floor(arr.length / 2);
+        const left = arr.slice(0,mid);
+        const right =arr.slice(mid);
+
+        return merge(mergeSort(left),mergeSort(right));
+      }  
+
+    // 封装一个类实现自增
+
+    class addCount {
+        constructor(count=0){
+            this.count = count;
+        }
+        getCount(){
+            return this.count;
+        }
+        addCount(){
+            this.count++;
+        }
+    }
+    let result = new addCount();   
+    console.log(result.addCount())
+    console.log(result.getCount()) 
+
+```
+
