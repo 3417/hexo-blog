@@ -1,0 +1,745 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/hexo-blog/img/favicon.png">
+  <link rel="icon" href="/hexo-blog/img/favicon.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="doudou">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="ES新特性ES是国际标准化组织发布的浏览器脚本语言的标准，全名：ECMAScript。ES是JS语言的国际标准，JS是ES的实现。在日常场合，两个词可以互换。ES是JS的子集，它是JS的内容的一部分，一个完整的JS实现是由以下三部分组成：核心（ESMAScript）：规定了JS的语法、类型、语句、关键字、保留字、操作符、对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES新特性">
+<meta property="og:url" content="https://3417.github.io/2020/02/24/javascript/es/index.html">
+<meta property="og:site_name" content="兜兜转转-前端切图仔">
+<meta property="og:description" content="ES新特性ES是国际标准化组织发布的浏览器脚本语言的标准，全名：ECMAScript。ES是JS语言的国际标准，JS是ES的实现。在日常场合，两个词可以互换。ES是JS的子集，它是JS的内容的一部分，一个完整的JS实现是由以下三部分组成：核心（ESMAScript）：规定了JS的语法、类型、语句、关键字、保留字、操作符、对象">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-24T06:34:13.000Z">
+<meta property="article:modified_time" content="2022-03-02T11:58:30.864Z">
+<meta property="article:author" content="doudou">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>ES新特性 - 兜兜转转-前端切图仔</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="/hexo-blog/lib/hint/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/hexo-blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/hexo-blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/hexo-blog/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"3417.github.io","root":"/hexo-blog/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/hexo-blog/hexo-blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/hexo-blog/js/utils.js" ></script>
+  <script  src="/hexo-blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/hexo-blog/">
+      <strong>兜兜转转</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/hexo-blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/hexo-blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/hexo-blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/hexo-blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/hexo-blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/hexo-blog/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="ES新特性"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        doudou
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-02-24 14:34" pubdate>
+          2020年02月24日 星期一 下午 14:34
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          1.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">ES新特性</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="ES新特性"><a href="#ES新特性" class="headerlink" title="ES新特性"></a>ES新特性</h2><blockquote><p>ES是国际标准化组织发布的浏览器脚本语言的标准，全名：ECMAScript。<br>ES是JS语言的国际标准，JS是ES的实现。在日常场合，两个词可以互换。<br>ES是JS的子集，它是JS的内容的一部分，一个完整的JS实现是由以下三部分组成：<br>核心（ESMAScript）：规定了JS的语法、类型、语句、关键字、保留字、操作符、对象</p>
+</blockquote>
+
+<a id="more"></a>
+
+<h3 id="ES6-ES2015"><a href="#ES6-ES2015" class="headerlink" title="ES6(ES2015)"></a>ES6(ES2015)</h3><p>1.类</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Animal</span>&#123;<br>     <span class="hljs-keyword">constructor</span>(name,run) &#123;<br>      <span class="hljs-keyword">this</span>.name = name;<br>      <span class="hljs-keyword">this</span>.run = run;<br>    &#125;<br>    Run() &#123;<br>      console.log(<span class="hljs-string">&#x27;name:&#x27;</span> + <span class="hljs-keyword">this</span>.name + <span class="hljs-string">&#x27;,run:&#x27;</span> + <span class="hljs-keyword">this</span>.run);<br><br>    &#125;<br>&#125;<br><br>let animals = new Animal(<span class="hljs-string">&#x27;Cat&#x27;</span>,<span class="hljs-string">&#x27;Running&#x27;</span>)<br>animals.Run(); <span class="hljs-comment">//name:Cat,run:Running</span><br></code></pre></td></tr></table></figure>
+<p>2.模块化</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> name =<span class="hljs-string">&#x27;Yellow&#x27;</span><br><br><span class="hljs-comment">//test.js</span><br><span class="hljs-keyword">let</span> name = <span class="hljs-string">&#x27;Test&#x27;</span>,age=<span class="hljs-string">&#x27;25&#x27;</span>;<br><span class="hljs-keyword">export</span>&#123;name,age&#125;<br><br><br><span class="hljs-comment">//导出函数</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">test</span>(<span class="hljs-params">msg</span>)&#123;<br>    <span class="hljs-keyword">return</span> msg<br>&#125;<br><br><span class="hljs-comment">//导入</span><br><span class="hljs-keyword">import</span> &#123;modulesName&#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;xxxxx&#x27;</span><br><span class="hljs-keyword">import</span> &#123;moduleA,moduleB&#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;xxxx&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>3.箭头函数</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs coq">()=&gt;<span class="hljs-number">1</span><br>v=&gt;v+<span class="hljs-number">1</span><br>(a,b)=&gt;a+b<br>()=&gt;&#123;<br>    xxxx<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>4.函数参数默认值(有局限性)</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><br><span class="hljs-keyword">function</span> <span class="hljs-params">(name=<span class="hljs-string">&quot;张三&quot;</span>,color=<span class="hljs-string">&quot;yellow&quot;</span>)</span>&#123;<br>    <span class="hljs-comment">//.....</span><br>&#125;<br><br></code></pre></td></tr></table></figure>
+<p>5.模板字符串</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-string">`<span class="hljs-subst">$&#123;name&#125;</span>在干嘛？`</span><br></code></pre></td></tr></table></figure>
+<p>6.解构赋值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> foo =[<span class="hljs-string">&#x27;one&#x27;</span>,<span class="hljs-string">&#x27;two&#x27;</span>,<span class="hljs-string">&#x27;three&#x27;</span>,<span class="hljs-string">&#x27;four&#x27;</span>]<br><span class="hljs-keyword">let</span> [one,two,three] = foo<br><br><span class="hljs-comment">//如果需要湖绿某些值</span><br><span class="hljs-keyword">let</span> [frist,,,last] = foo<br><br><span class="hljs-keyword">let</span> a,b;<br>[a,b] =[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a) <span class="hljs-comment">//1</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(b) <span class="hljs-comment">//2</span><br><span class="hljs-comment">//改变默认值</span><br><span class="hljs-keyword">let</span> c,d;<br>[c=<span class="hljs-number">1</span>,d=<span class="hljs-number">6</span>] =[<span class="hljs-number">1</span>]<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(c) <span class="hljs-comment">//1</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(d) <span class="hljs-comment">//6</span><br><br><span class="hljs-comment">//交换两个变量的值</span><br><span class="hljs-keyword">let</span> e =<span class="hljs-number">1</span>,f=<span class="hljs-number">2</span>;<br>[e,f] = [f,e]<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(e) <span class="hljs-comment">//2</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(f) <span class="hljs-comment">//1</span><br><br><span class="hljs-comment">//获取对象中的值</span><br><span class="hljs-keyword">const</span> stu = &#123;<br>    <span class="hljs-attr">name</span>:<span class="hljs-string">&quot;张三&quot;</span>,<br>    <span class="hljs-attr">age</span>:<span class="hljs-number">25</span>,<br>    <span class="hljs-attr">city</span>:<span class="hljs-string">&quot;成都&quot;</span><br>&#125;<br><br><span class="hljs-keyword">const</span> &#123;name,age,city&#125; = stu;<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name) <span class="hljs-comment">//张三</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(age) <span class="hljs-comment">//25</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(city) <span class="hljs-comment">//成都</span><br></code></pre></td></tr></table></figure>
+<p>7.延展操作符</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-comment">//姑且自己叫做展开运算符吧</span><br><span class="hljs-number">1</span>、在函数调用/数组构造时, 将数组表达式或者string在语法层面展开；还可以在构造对象时, 将对象表达式按key-value的方式展开<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">sum</span>(<span class="hljs-params">x, y, z</span>) &#123;<br>  <span class="hljs-keyword">return</span> x + y + z;<br>&#125;<br>const numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br><br><span class="hljs-comment">//不使用延展操作符</span><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-built_in">sum</span>.apply(<span class="hljs-literal">null</span>, numbers));<br><br><span class="hljs-comment">//使用延展操作符</span><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-built_in">sum</span>(...numbers));<span class="hljs-comment">// 6</span><br><br><span class="hljs-comment">//构造数组</span><br>const stuendts = [<span class="hljs-string">&#x27;Jine&#x27;</span>,<span class="hljs-string">&#x27;Tom&#x27;</span>]; <br>const persons = [<span class="hljs-string">&#x27;Tony&#x27;</span>,... stuendts,<span class="hljs-string">&#x27;Aaron&#x27;</span>,<span class="hljs-string">&#x27;Anna&#x27;</span>];<br>conslog.<span class="hljs-built_in">log</span>(persions)<span class="hljs-comment">// [&quot;Tony&quot;, &quot;Jine&quot;, &quot;Tom&quot;, &quot;Aaron&quot;, &quot;Anna&quot;]</span><br><br><span class="hljs-comment">//数组拷贝</span><br><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br><span class="hljs-keyword">var</span> arr2 = [...arr]; <span class="hljs-comment">// 等同于 arr.slice()</span><br>arr2.<span class="hljs-built_in">push</span>(<span class="hljs-number">4</span>); <br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(arr2)<span class="hljs-comment">//[1, 2, 3, 4]</span><br><br><span class="hljs-comment">//链接多个数组</span><br><span class="hljs-keyword">var</span> arr1 = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>];<br><span class="hljs-keyword">var</span> arr2 = [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];<br><span class="hljs-keyword">var</span> arr3 = [...arr1, ...arr2];<span class="hljs-comment">// 将 arr2 中所有元素附加到 arr1 后面并返回</span><br><span class="hljs-comment">//等同于</span><br><span class="hljs-keyword">var</span> arr4 = arr1.concat(arr2);<br><br><span class="hljs-comment">//合并对象</span><br><span class="hljs-keyword">var</span> obj1 = &#123; <span class="hljs-attr">foo</span>: <span class="hljs-string">&#x27;bar&#x27;</span>, <span class="hljs-attr">x</span>: <span class="hljs-number">42</span> &#125;;<br><span class="hljs-keyword">var</span> obj2 = &#123; <span class="hljs-attr">foo</span>: <span class="hljs-string">&#x27;baz&#x27;</span>, <span class="hljs-attr">y</span>: <span class="hljs-number">13</span> &#125;;<br><br><span class="hljs-keyword">var</span> clonedObj = &#123; ...obj1 &#125;;<br><span class="hljs-comment">// 克隆后的对象: &#123; foo: &quot;bar&quot;, x: 42 &#125;</span><br><br><span class="hljs-keyword">var</span> mergedObj = &#123; ...obj1, ...obj2 &#125;;<br><span class="hljs-comment">// 合并后的对象: &#123; foo: &quot;baz&quot;, x: 42, y: 13 &#125;</span><br><br><br></code></pre></td></tr></table></figure>
+<p>8.对象属性简写</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">const <span class="hljs-type">name</span>=<span class="hljs-string">&#x27;Ming&#x27;</span>,age=<span class="hljs-string">&#x27;18&#x27;</span>,city=<span class="hljs-string">&#x27;Shanghai&#x27;</span>;<br>   <br>const student = &#123;<br>    <span class="hljs-type">name</span>:<span class="hljs-type">name</span>,<br>    age:age,<br>    city:city<br>&#125;;<br>console.log(student);//&#123;<span class="hljs-type">name</span>: &quot;Ming&quot;, age: &quot;18&quot;, city: &quot;Shanghai&quot;&#125;<br><br>const <span class="hljs-type">name</span>=<span class="hljs-string">&#x27;Ming&#x27;</span>,age=<span class="hljs-string">&#x27;18&#x27;</span>,city=<span class="hljs-string">&#x27;Shanghai&#x27;</span>;<br>  <br>const student = &#123;<br>    <span class="hljs-type">name</span>,<br>    age,<br>    city<br>&#125;;<br>console.log(student);//&#123;<span class="hljs-type">name</span>: &quot;Ming&quot;, age: &quot;18&quot;, city: &quot;Shanghai&quot;&#125;<br><br><br></code></pre></td></tr></table></figure>
+<p>9.Promise</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-keyword">var</span> waitSecond = <span class="hljs-keyword">new</span> Promise(<span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>)<br>&#123;<br>    setTimeout(resolve, <span class="hljs-number">1000</span>);<br>&#125;);<br><br>waitSecond<br>    .then(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)<br>    &#123;<br>      <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&quot;Hello&quot;</span>); <span class="hljs-comment">// 1秒后输出&quot;Hello&quot;</span><br>      <span class="hljs-keyword">return</span> waitSecond;<br>    &#125;)<br>    .then(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)<br>    &#123;<br>        <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&quot;Hi&quot;</span>); <span class="hljs-comment">// 2秒后输出&quot;Hi&quot;</span><br>    &#125;);<br><br><br></code></pre></td></tr></table></figure>
+<p>10.Let与Const</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript">在之前<span class="hljs-variable constant_">JS</span>是没有块级作用域的，<span class="hljs-keyword">const</span>与<span class="hljs-keyword">let</span>填补了这方便的空白，<span class="hljs-keyword">const</span>与<span class="hljs-keyword">let</span>都是块级作用域。<br>&#123;<br>  <span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>;<br>&#125;<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a); <span class="hljs-comment">// 输出10</span><br><br>&#123;<br>    <span class="hljs-keyword">let</span> a =<span class="hljs-number">10</span><br>&#125;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a) <span class="hljs-comment">//ReferenceError: a is not defined&quot;</span><br></code></pre></td></tr></table></figure>
+
+
+<h3 id="ES7-ES2016"><a href="#ES7-ES2016" class="headerlink" title="ES7(ES2016)"></a>ES7(ES2016)</h3><p>1.数组includes()方法，用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回true，否则返回false</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs arcade">let arr = [<span class="hljs-string">&#x27;react&#x27;</span>, <span class="hljs-string">&#x27;angular&#x27;</span>, <span class="hljs-string">&#x27;vue&#x27;</span>];<br><br><span class="hljs-keyword">if</span> (arr.<span class="hljs-built_in">includes</span>(<span class="hljs-string">&#x27;react&#x27;</span>))<br>&#123;<br>    <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;react存在&#x27;</span>);<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<p>2.a ** b指数运算符，它与 Math.pow(a, b)相同。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">console</span>.log(<span class="hljs-number">2</span>**<span class="hljs-number">10</span>);// 输出<span class="hljs-number">1024</span><br></code></pre></td></tr></table></figure>
+<h3 id="ES8-ES2017"><a href="#ES8-ES2017" class="headerlink" title="ES8(ES2017)"></a>ES8(ES2017)</h3><p>1.async&#x2F;await</p>
+<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">process</span>(<span class="hljs-params">array</span>)</span>&#123;<br>    <span class="hljs-keyword">for</span> <span class="hljs-keyword">await</span> (<span class="hljs-keyword">let</span> i <span class="hljs-keyword">of</span> array)&#123;<br>        <span class="hljs-comment">//.....</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>2.Object.values()[Object.values()是一个与Object.keys()类似的新函数，但返回的是Object自身属性的所有值，不包括继承的值]</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs arcade">const vals=Object.keys(obj).<span class="hljs-built_in">map</span>(<span class="hljs-function"><span class="hljs-params">key</span>=&gt;</span>obj[key]);<br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(vals);<span class="hljs-comment">//[1, 2, 3]</span><br><br></code></pre></td></tr></table></figure>
+<p>3.Object.entries()[Object.entries()函数返回一个给定对象自身可枚举属性的键值对的数组]</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> [key,value] <span class="hljs-keyword">of</span> <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">entries</span>(obj1))&#123;<br>	<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`key: <span class="hljs-subst">$&#123;key&#125;</span> value:<span class="hljs-subst">$&#123;value&#125;</span>`</span>)<br>&#125;<br><span class="hljs-comment">//key:a value:1</span><br><span class="hljs-comment">//key:b value:2</span><br><span class="hljs-comment">//key:c value:3</span><br><br><br></code></pre></td></tr></table></figure>
+<p>4.String padding</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">String</span>.padStart(targetLength,[padString])<br><span class="hljs-attribute">targetLength</span>:当前字符串需要填充到的目标长度。如果这个数值小于当前字符串的长度，则返回当前字符串本身。<br><span class="hljs-attribute">padString</span>:(可选)填充字符串。如果字符串太长，使填充后的字符串长度超过了目标长度，则只保留最左侧的部分，其他部分会被截断，此参数的缺省值为 <span class="hljs-string">&quot; &quot;</span><br><span class="hljs-attribute">console</span>.log(&#x27;<span class="hljs-number">0</span>.<span class="hljs-number">0</span>&#x27;.padStart(<span class="hljs-number">4</span>,&#x27;<span class="hljs-number">10</span>&#x27;)) //<span class="hljs-number">10</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">console</span>.log(&#x27;<span class="hljs-number">0</span>.<span class="hljs-number">0</span>&#x27;.padStart(<span class="hljs-number">20</span>))// <span class="hljs-number">0</span>.<span class="hljs-number">00</span>    <br></code></pre></td></tr></table></figure>
+
+<blockquote><p>以上信息都来自于掘金网站，地址为:(<a target="_blank" rel="noopener" href="https://juejin.im/post/5ca2e1935188254416288eb2">https://juejin.im/post/5ca2e1935188254416288eb2</a>)</p>
+</blockquote>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/hexo-blog/categories/JavaScript/" class="category-chain-item">JavaScript</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/hexo-blog/tags/JavaScript/" class="print-no-link">#JavaScript</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>ES新特性</div>
+      <div>https://3417.github.io/2020/02/24/javascript/es/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>doudou</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年2月24日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/hexo-blog/2020/02/25/javascript/mapSet/" title="ES6 Map和Set">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ES6 Map和Set</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/hexo-blog/2020/02/19/css/style-loder/" title="前端层叠样式表">
+                        <span class="hidden-mobile">前端层叠样式表</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/hexo-blog/js/events.js" ></script>
+<script  src="/hexo-blog/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/hexo-blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/hexo-blog/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/hexo-blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
